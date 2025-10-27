@@ -1,61 +1,74 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AG Coin | Daily Mining</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Coin | Günlük Kazım</title>
+  <link rel="stylesheet" href="style.css" />
   <script type="module" src="app.js" defer></script>
 </head>
 <body>
-
-  <header>
+  <!-- Header -->
+  <header class="glass-header">
     <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Gold_coin_icon.png" alt="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Gold_coin_icon.png" alt="logo" />
       <span>AG Coin</span>
     </div>
 
-    <nav id="nav-auth">
+    <div class="nav-buttons" id="nav-auth">
       <button id="login-btn" class="btn">Giriş</button>
-      <button id="register-btn" class="btn btn-outline">Qeydiyyat</button>
-    </nav>
+      <button id="register-btn" class="btn-outline">Qeydiyyat</button>
+    </div>
 
-    <div id="profile-icon" class="hidden"></div>
+    <div id="profile-icon" class="hidden profile-avatar"></div>
     <div id="logout-menu" class="hidden">Çıxış et</div>
   </header>
 
+  <!-- Main Dashboard -->
   <main>
-    <section id="dashboard">
+    <section class="container">
       <div class="balance-card glass">
         <h2>Balans</h2>
         <h1 id="balance">0.00000000 <span>AGC</span></h1>
         <button id="mine-btn" class="mine-btn">⚡ Kazım Yap</button>
-        <p id="mine-status">Hər 24 saatda bir dəfə kazıma edə bilərsən.</p>
-        <div id="countdown"></div>
-        <button id="withdraw-btn" class="btn btn-outline">💰 Balans Köçür</button>
-        <p class="note">💡 Balansdan pul çıxarışı sistemi hazırlanır və tezliklə istifadəyə veriləcəkdir.</p>
+        <p id="mine-status">Hər 24 saatdan bir kazıma edə bilərsən.</p>
+        <div id="countdown" class="countdown"></div>
+        <button id="withdraw-btn" class="btn-outline">💰 Balans Köçür</button>
+        <p class="note">
+          💡 Balansdan pul çıxarışı sistemi hazırlanır və tezliklə istifadəyə veriləcəkdir.
+        </p>
       </div>
 
       <div class="ref-card glass">
         <h2>Referal Sistemi</h2>
-        <p>Bu linki paylaş və qazancını artır:</p>
-        <input type="text" id="ref-link" readonly>
-        <p class="small">Hər dostun qeydiyyat zamanı sənin emailini yazdıqda sənə +0.000002 AGC əlavə olunur.</p>
+        <p>Bu linki paylaş və dostlarını dəvət et:</p>
+        <input type="text" id="ref-link" readonly />
+        <p class="small">
+          Hər dostun qeydiyyat zamanı sənin emailini yazdıqda sənə
+          <b>+0.000002 AGC</b> əlavə olunur.
+        </p>
       </div>
     </section>
   </main>
 
-  <!-- Auth Modal -->
+  <!-- Modal (Auth) -->
   <div id="auth-modal" class="modal hidden">
-    <div class="modal-content">
+    <div class="modal-content glass">
+      <span id="close-modal" class="close">&times;</span>
       <h3 id="auth-title">Giriş et</h3>
-      <input type="email" id="auth-email" placeholder="Email">
-      <input type="password" id="auth-password" placeholder="Şifrə">
-      <input type="password" id="auth-password2" placeholder="Şifrə (təkrar)" class="hidden">
+
+      <input type="email" id="auth-email" placeholder="Email" />
+      <input type="password" id="auth-password" placeholder="Şifrə" />
+      <input
+        type="password"
+        id="auth-password2"
+        placeholder="Şifrə (təkrar)"
+        class="hidden"
+      />
+
       <button id="auth-submit" class="btn full">Davam et</button>
       <p id="auth-switch"></p>
     </div>
   </div>
-
 </body>
 </html>
