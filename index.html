@@ -14,11 +14,14 @@
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Gold_coin_icon.png" alt="logo">
       <span>AG Coin</span>
     </div>
+
     <nav id="nav-auth">
       <button id="login-btn" class="btn">Giriş</button>
       <button id="register-btn" class="btn btn-outline">Qeydiyyat</button>
     </nav>
+
     <div id="profile-icon" class="hidden"></div>
+    <div id="logout-menu" class="hidden">Çıxış et</div>
   </header>
 
   <main>
@@ -28,6 +31,8 @@
         <h1 id="balance">0.00000000 <span>AGC</span></h1>
         <button id="mine-btn" class="mine-btn">⚡ Kazım Yap</button>
         <p id="mine-status">Hər 24 saatda bir dəfə kazıma edə bilərsən.</p>
+        <div id="countdown"></div>
+        <button id="withdraw-btn" class="btn btn-outline">💰 Balans Köçür</button>
         <p class="note">💡 Balansdan pul çıxarışı sistemi hazırlanır və tezliklə istifadəyə veriləcəkdir.</p>
       </div>
 
@@ -40,7 +45,7 @@
     </section>
   </main>
 
-  <!-- Modal -->
+  <!-- Auth Modal -->
   <div id="auth-modal" class="modal hidden">
     <div class="modal-content">
       <h3 id="auth-title">Giriş et</h3>
